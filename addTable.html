@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div >
+    
+
+    <div>
+  
+      <label>number 1</label>
+      <input type="text" name="number1" id="number1" placeholder="enter single digit number"> <br>
+      +<br>
+      <label>number 2</label>
+      <input type="text" name="number2" id="number2" placeholder="enter single digit number"><br>
+      <button type="submit"  onclick="submit1()">submit</button><br><br>
+      <div class="screen" id="screen1"></div>
+  
+  
+  </div> <!-- End Container-->
+  
+  
+  <script>
+  function submit1(){
+      var a =  document.getElementById("number1").value;
+      var b =  document.getElementById("number2").value;
+      var c = parseInt(a) + parseInt(b); 
+      document.getElementById("screen1").innerHTML=c;
+    }
+  </script>
+
+
+
+
+<!-- program 2 -->
+
+<!DOCTYPE html>
+<html>
+<body>
+<!-- get elementByTagName -->
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul>
+
+<p>Click "Change" to change the text of the first list item.</p>
+<button onclick="myFunction()">Change</button>
+
+<script>
+function myFunction() {
+   const list = document.getElementsByTagName("ul")[0];
+  list.getElementsByTagName("li")[0].innerHTML = "Milk";
+}
+</script>
+
+<!-- program3 -->
+
+<style>
+  table, th, td ,tr {
+    border:1px solid black;
+  }
+  </style>
+  <body>
+  
+  <h2>A basic HTML table</h2>
+  
+  <table style="width:100%">
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Centro comercial Moctezuma</td>
+      <td>Francisco Chang</td>
+      <td>Mexico</td>
+    </tr>
+  </table>
+  
+  <p>To undestand the example better, we have added borders to the table.</p>
+  
+
+</body>
+</html>

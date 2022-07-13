@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+    
+    <iframe src = "https://www.rgpv.ac.in/"></iframe>
+</head>
+<body>
+    <table>
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria
+      Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Centro
+      comercial Moctezuma</td>
+          <td>Francisco
+      Chang</td>
+          <td>Mexico</td>
+        </tr>
+      </table>
+      
+
+    <script>
+       
+        function prom(complete){
+          return new Promise(function(resolve,reject){
+            if (complete){
+                resolve("i am sucessfull")
+            }else{
+                reject("i am rejected")
+            }
+
+        });
+
+        }
+       
+        let onfullfilment = (r) => {
+            console.log (r)
+        }
+        let rejection = (result) => {
+            console.log (result)
+        }
+        prom(false).then(onfullfilment).catch(rejection)
+
+        let x
+        console.log(x)
+        let z = "insha 2 "
+        console.log(z)
+ 
+        var u,i;
+        var  p = "insha"
+        console.log(p)
+        var p  = "insha 2 "
+        console.log(p)
+
+        const q=1;
+        
+
+        
+
+
+
+        
+
+        
+    </script>
+    
+</body>
+</html>
