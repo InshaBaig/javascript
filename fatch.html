@@ -1,0 +1,98 @@
+<html lang="en">
+
+<head>
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		// console.log("inssha")
+		// fetch("text.txt")
+		// console.log("inssha")
+		// .then((response)=> { 
+
+		// return response.text()
+
+
+		// })
+		// .then((result)=>{
+		//  console.log("result-->", result)
+		//  document.write(result)
+		// });
+
+// 		function getdata() {
+
+// console.log("started get data")
+
+
+// 			url = "https://api.github.com/users";
+// 			fetch(url).then((response) => {
+// 				return response.json();
+
+// 			})
+// 				.then((data) => {
+// 					console.log(data);
+// 				})
+// 		}  
+// 		console.log ("before running data")
+// 		getdata()
+// 		console.log ("After running data")
+
+
+
+
+	</script>
+
+<form action = "" onsubmit="postdata()">
+	name
+	<input type= "text" id="name">
+	<br>
+	Age
+	<input type="text" label="Age" id="age">
+	<br>
+	salary
+	<input type="text" label="salary" id ="salary">
+	<br>
+	<button type="submit">Click me</button>	
+</form>
+
+
+	<script>
+		function postdata(){
+
+			var name = document.getElementById ("name").value
+			var salary = document.getElementById ("salary").value
+			var age = document.getElementById ("age").value
+		url = "https://dummy.restapiexample.com/api/v1/create"
+		data = { "name" : name ,"salary": salary,"age": age }
+data = JSON.stringify(data)
+		params ={
+			method:'POST',
+			headers : {
+				"Content-Type" : "application/json"
+			},
+		 body : data
+		}
+
+	 fetch(url,params).then(response=>response.json()).then((data)=>{console.log(data)})
+
+	}
+
+
+
+	</script>
+	<script>
+	
+	
+			fetch ("https://jsonplaceholder.typicode.com/users").then( response => response.json()).then( data => console.log(data))
+
+	
+ 
+	</script>
+
+
+
+
+</body>
+
+</html>
