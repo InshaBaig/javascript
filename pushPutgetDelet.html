@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+       <h1>Push Put Delete Get Api</h1>   
+</body>
+<script>
+       
+// GET
+
+fetch("https://reqres.in/api/users/2")
+.then(res => {
+           if (res.ok) { console.log("Get request Sucessfull")}
+          else {("Get request Unscessfull")}
+          return res;
+})
+.then(res => res.json())
+.then(data=>console.log(data))
+ 
+
+/*
+// post
+fetch ("https://reqres.in/api/users", {
+          method : "post",
+          headers: {
+                    "content-type": "application/json"
+          },
+          body: JSON.stringify(
+                    {
+                    "name" : "insha",
+                    "post" :"Developer",
+                    "rollmumber": "5"
+          })
+})
+.then(res => {
+           if (res.ok){ console.log("POST request Sucessfull")}
+           else {console.log("POST request Sucessfull")}
+           return res;
+          })
+
+
+.then(res=> res.json())
+.then(data =>console.log(data));
+
+
+/*
+
+//put
+fetch ("https://reqres.in/api/users/2",{
+          method : "put",
+          headers : {
+                    "content-type": "application/json"
+          },
+          body: JSON.stringify({
+                    "name": "Goher",
+                    "job" : "Juniour dev",
+                    "update" : "updated"
+          })
+})
+.then (res => {
+          if (res.ok){console.log("PUT Request Sucessfull")}
+          else {console.log("PUT Request Sucessfull")}
+          return res;
+})
+.then (res => res.json())
+.then (data => console.log(data))
+.catch (error => console.log("error"))
+
+
+
+
+// delete
+fetch("https://reqres.in/api/users/2",{
+          method : "DELETE", 
+          headers : {
+                    "content-type": "application/json"
+          },
+
+})
+.then (res =>{
+          if (res.ok){console.log("Delete request Sucesfull")}
+          else{console.log("delete request Unsucessfull")}
+          return res;        
+})
+.then (res => console.log (res))
+
+*/
+</script>
+</html>
